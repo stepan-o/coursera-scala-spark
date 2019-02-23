@@ -10,11 +10,15 @@ println("[------ Add two values ------]")
 
 println("First value:")
 val foo = 123
+foo
 
 println("Second value:")
 val bar = 321
+bar
 
-println("foo + bar = " + foo + bar)
+println("Adding values to strings coverts them to strings")
+val sum_strings = "foo + bar = " + foo + bar
+sum_strings
 
 println("foo + bar = ", foo + bar)
 

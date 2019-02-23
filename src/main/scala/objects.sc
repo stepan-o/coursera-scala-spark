@@ -1,16 +1,32 @@
 import java.util
 
 object ScalaWorksheet {
-  val arrayList = new util.ArrayList[Int]()
 
-  for (i <- 1 to 10) {
-    println("i = " + i)
+  def reg_list(min_num: Int = 1, max_num: Int = 10) = {
+    val list = min_num.to(max_num)
+    println("Calling a print loop method of object ScalaWorksheet:")
+    println(list)
+    list foreach println
+  }
+  def array_list = {
+    val arrayList = new util.ArrayList[Int](10)
+  }
+
+  def print_loop(max_num: Int = 10, min_num: Int = 1) = {
+    println("Calling a print loop method of object ScalaWorksheet:")
+    println(min_num, max_num)
+    for (i <- min_num to max_num) {
+      println("i=" + i)
+    }
   }
 }
 
-// create a list of ints from 1 to 5 and print them all
+// calling a method with default arguments
 
+ScalaWorksheet.print_loop()
 
-val list = 1.to(10)
+// calling a method with custom arguments
 
-list foreach println
+ScalaWorksheet.print_loop(min_num = 5, max_num = 20)
+
+ScalaWorksheet.reg_list()
