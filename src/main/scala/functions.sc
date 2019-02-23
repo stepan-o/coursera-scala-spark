@@ -1,3 +1,5 @@
+import java.security.KeyStore.TrustedCertificateEntry
+
 def print_list(start: Int = 1, stop: Int = 10): Unit ={
   val list = start.to(stop)
   println(list)
@@ -5,3 +7,11 @@ def print_list(start: Int = 1, stop: Int = 10): Unit ={
 }
 
 print_list(3, 5)
+
+1
+
+1 + ""
+
+1 + 5
+
+1 + "" + 2
