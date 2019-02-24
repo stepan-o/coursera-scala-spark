@@ -15,3 +15,6 @@ print_list(3, 5)
 1 + 5
 
 1 + "" + 2
+
+val result:Float = 100 / 9
+result
