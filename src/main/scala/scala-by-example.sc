@@ -1,6 +1,6 @@
 //implementation of Quicksort in Scala
 
-def sort(xs: Array[Int]): Unit = {
+def quicksort(xs: Array[Int]): Unit = {
   def swap(i: Int, j: Int): Unit = {
     val t = xs(i); xs(i) = xs(j); xs(j) = t
   }
@@ -20,4 +20,17 @@ def sort(xs: Array[Int]): Unit = {
     if (j < r) sort1(i, r)
   }
   sort1(0, xs.length - 1)
+}
+
+// Quicksort in a functional style
+
+def quicksort_func(xs: Array[Int]): Array[Int] = {
+  if (xs.length <= 1) xs
+  else {
+    val pivot = xs(xs.length / 2)
+    Array.concat(
+      quicksort_func(xs filter (pivot >)),
+      xs filter (pivot ==),
+      quicksort_func(xs filter (pivot <)))
+  }
 }

@@ -6,7 +6,14 @@ def print_list(start: Int = 1, stop: Int = 10): Unit ={
   list foreach println
 }
 
+
+def add(num1: Int, num2: Int): Int = {
+  num1 + num2
+}
+
 print_list(3, 5)
+
+add(3, 5)
 
 1
 
@@ -18,3 +25,5 @@ print_list(3, 5)
 
 val result:Float = 100 / 9
 result
+
+5 > 3
