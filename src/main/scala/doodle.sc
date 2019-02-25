@@ -13,6 +13,7 @@
 
 val x: Array[Double] = Array(1.0, 0.1, 0.01, 0.001, 0.0001)
 for ( e <- x ) yield Math.sin(e) / e
+for ( e <- x ) yield Math.sin(e) * e
 for ( e <- x ) println("sin(" + e + ") = " + Math.sin(e))
 for ( e <- x if 1 - Math.sin(e) / e < 0.005) println("Getting close to 1")
 
